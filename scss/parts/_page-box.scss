@@ -1,0 +1,237 @@
+.page-box {
+  padding: 40px 0;
+  background: #f1f0f0;
+}
+.white-bg {
+  background: #fff;
+}
+.title {
+  color: $blue;
+  font-size: 27px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.block-scheme {
+  display: inline-block;
+  vertical-align: middle;
+}
+.item-scheme {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+
+  background: $grey;
+  width: 130px;
+  span {
+    color: #fff;
+    font-size: 13px;
+  }
+}
+.block-scheme-wrapper {
+  width: 960px;
+  margin: auto;
+  text-align: center;
+}
+.arrow {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50px;
+  &:before {
+    content: '';
+    width: 25px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat 0 -70px;
+    display: block;
+    margin: auto;
+  }
+}
+.last-item-scheme {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  span {
+    display: block;
+    padding: 33px 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 20px;
+    background: $grey;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.arrow-lost {
+  display: table-cell;
+  position: relative;
+  width: 50px;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 20px;
+    display: block;
+    left: 50%;
+    margin-left: -11px;
+    background: url(../images/sprite.png) no-repeat;
+  }
+  &:before {
+    top: 0;
+    background-position: 0 -96px;
+  }
+  &:after {
+    bottom: 0;
+    background-position: 0 -119px;
+  }
+}
+
+
+
+
+.plus-wrap {
+  margin-top: 50px;
+  text-align: center;
+}
+.plus-item {
+  width: 170px;
+  @include inline-block(top);
+  @include box-sizing;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+  p {
+    font-size: 14px;
+    margin-top: 25px;
+  }
+}
+.plus-img {
+  max-width: 155px;
+  height: 55px;
+  margin: auto;
+  overflow: hidden;
+  img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+.item-description {
+  text-align: left;
+  @include inline-block(top);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 260px;
+  span {
+    @include inline-block(middle);
+    font-size: 14px;
+    @include box-sizing;
+  }
+}
+.icon-tape {
+  padding: 10px 15px;
+  font-weight: bold;
+  width: 50px;
+  color: #fff;
+  height: 45px;
+  background: url(../images/tape.png) no-repeat center center;
+}
+.tepe-desc {
+  width: 200px;
+  font-size: 14px;
+}
+
+
+
+
+
+.text-wrapper {
+  padding: 0 50px;
+  margin-top: 30px;
+  p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.item-garant {
+  width: 150px;
+  @include inline-block(top);
+  margin-right: 70px;
+  &:last-child {
+    margin-right: 0;
+  }
+  .img-garant {
+    width: 110px;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+    img {
+      max-width: 100%;
+    }
+  }
+  p {
+    font-size: 16px;
+    color: #484848;
+  }
+}
+
+
+
+.certificate {
+  width: 145px;
+  @include inline-block(top);
+  overflow: hidden;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+
+
+footer {
+  background: $blue;
+  padding: 30px 0;
+  text-align: center;
+  .contact-info {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 160px;
+    @include inline-block(middle);
+    .btn {
+      @include inline-block;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      color: $blue;
+      transition: .5s;
+      &:hover {
+        background: $grey;
+        color: #fff;
+      }
+    }
+    span {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+}
+

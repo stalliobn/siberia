@@ -1,0 +1,25 @@
+$wrapper-width: 940px;
+$animation-speed: 300ms;
+$max-z-index: 1000;
+$max-big-image-width: 1280px;
+
+$breakpoints: (
+  desktop: $wrapper-width,
+  big-tablet: 780px,
+  small-tablet: 620px,
+  big-phon: 500px,
+  phon: 350px,
+);
+
+// ================================ DIMENSIONS =================================
+$dimensions: (
+  frontpage-news-margin: 1.53%,
+  frontpage-news-width: 32.312%,
+);
+
+// ================================== COLORS ===================================
+$white: #fff;
+$black: #000;
+
+$blue: #32438c;
+$grey: #646464;
