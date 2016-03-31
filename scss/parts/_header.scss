@@ -16,6 +16,17 @@ header {
     font-size: 24px;
     line-height: 24px;
   }
+  a {
+    color: $grey;
+    display: block;
+    transition: .5s;
+    margin-top: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    &:hover {
+      opacity: .5;
+    }
+  }
 }
 .number {
   color: $blue;

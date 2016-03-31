@@ -27,8 +27,13 @@ close.click( function(){
 var owlMain = $('.owl').owlCarousel({
   loop:true,
   margin:10,
+  smartSpeed: 600,
+  autoplay: true,
+  autoplayTimeout: 10000,
+  dots: false,
+  autoplayHoverPause: true,
 
-  slideSpeed : 300,
+  slideSpeed: 600,
   paginationSpeed : 400,
   singleItem : true,
   items : 1,
@@ -43,4 +48,6 @@ $('.next').click(function() {
 $('.prev').click(function() {
   owlMain.trigger('prev.owl.carousel');
 });
+
+$('.gallery1 a').lightbox();
 })(jQuery);

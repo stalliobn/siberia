@@ -74,6 +74,32 @@
       <input type="submit" class="button" />
     </form>
   </div>
+  <div id="modal6" class="modal_div">
+    <span class="modal_close"></span>
+    <span class="title">Хочу</span>
+    <form>
+      <span>Введите Ваше имя:</span>
+      <input type="text" />
+      <span>Телефон:</span>
+      <input type="text" />
+      <span>E-mail:</span>
+      <input type="email" />
+      <input type="submit" class="button" />
+    </form>
+  </div>
+  <div id="modal7" class="modal_div">
+    <span class="modal_close"></span>
+    <span class="title">Заказать</span>
+    <form>
+      <span>Введите Ваше имя:</span>
+      <input type="text" />
+      <span>Телефон:</span>
+      <input type="text" />
+      <span>E-mail:</span>
+      <input type="email" />
+      <input type="submit" class="button" />
+    </form>
+  </div>
   <div class="laer">
     <div class="wrapper">
       <header class="clearfix">
@@ -85,6 +111,7 @@
         <div class="phone">
           <span class="number">8 (863) 303 20 90</span>
           <span class="button open_modal" data-href="#modal1">Заказать звонок</span>
+          <a href="">Адреса магизонов</a>
         </div>
       </header>
       <div class="slider-box">
@@ -103,7 +130,7 @@
                     <span class="number">Цена: 1 000 000</span>
                   </div>
                   <div class="link-wrap">
-                    <a href="">Хочу такой же!</a>
+                    <span data-href="#modal6" class="open_modal">Хочу такой же!</span>
                   </div>
                 </div>
               </div>
@@ -121,7 +148,7 @@
                     <span class="number">Цена: 1 000 000</span>
                   </div>
                   <div class="link-wrap">
-                    <a href="">Хочу такой же!</a>
+                    <span href="" data-href="#modal6" class="open_modal">Хочу такой же!</span>
                   </div>
                 </div>
               </div>
@@ -181,11 +208,11 @@
               </tr>
               <tr>
                 <td></td>
-                <td><span class="button">Заказать</span></td>
-                <td><span class="button">Заказать</span></td>
-                <td><span class="button">Заказать</span></td>
-                <td><span class="button">Заказать</span></td>
-                <td><span class="button">Заказать</span></td>
+                <td><span data-href="#modal7" class="button open_modal">Заказать</span></td>
+                <td><span data-href="#modal7" class="button open_modal">Заказать</span></td>
+                <td><span data-href="#modal7" class="button open_modal">Заказать</span></td>
+                <td><span data-href="#modal7" class="button open_modal">Заказать</span></td>
+                <td><span data-href="#modal7" class="button open_modal">Заказать</span></td>
               </tr>
             </tbody>
           </table>
@@ -372,21 +399,31 @@
       </section>
       <section class="page-box white-bg">
         <h2 class="title">Сертификация</h2>
-        <div class="plus-wrap">
+        <div class="plus-wrap gallery1">
           <div class="certificate">
-            <img src="images/sertificate.jpg" alt="" />
+            <a href="images/sertificate.jpg">
+              <img src="images/sertificate.jpg" alt="" />
+            </a>
           </div>
           <div class="certificate">
-            <img src="images/sertificate.jpg" alt="" />
+            <a href="images/sertificate.jpg">
+              <img src="images/sertificate.jpg" alt="" />
+            </a>
           </div>
           <div class="certificate">
-            <img src="images/sertificate.jpg" alt="" />
+            <a href="images/sertificate.jpg">
+              <img src="images/sertificate.jpg" alt="" />
+            </a>
           </div>
           <div class="certificate">
-            <img src="images/sertificate.jpg" alt="" />
+            <a href="images/sertificate.jpg">
+              <img src="images/sertificate.jpg" alt="" />
+            </a>
           </div>
           <div class="certificate">
-            <img src="images/sertificate.jpg" alt="" />
+            <a href="images/sertificate.jpg">
+              <img src="images/sertificate.jpg" alt="" />
+            </a>
           </div>
         </div>
         <div class="button-box">
@@ -413,6 +450,7 @@
   </div>
 <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.lightbox.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

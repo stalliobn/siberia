@@ -78,13 +78,16 @@
 .link-wrap {
   text-align: right;
   margin-top: 20px;
-  a {
+  span {
     @include inline-block;
     padding: 15px 25px;
     background: $blue;
     color: #fff;
     text-transform: uppercase;
     font-size: 24px;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
     transition: .5s;
     text-decoration: none;
     &:hover {
