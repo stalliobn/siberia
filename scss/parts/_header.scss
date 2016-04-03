@@ -1,5 +1,29 @@
 header {
   padding: 20px 0;
+  @include breakpoint((to: 992px)) {
+    .logo {
+      width: 200px;
+    }
+  }
+
+  @include breakpoint((to: 768px)) {
+
+    .logo {
+      float: none;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+    .phone {
+      float: none;
+      text-align: center;
+      .button {
+        font-size: 19px;
+      }
+      .number {
+        font-size: 25px;
+      }
+    }
+  }
 }
 .logo {
   width: 230px;

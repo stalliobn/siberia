@@ -10,10 +10,16 @@
   font-size: 27px;
   text-transform: uppercase;
   text-align: center;
+  @include breakpoint((to: 768px)) {
+    font-size: 20px;
+  }
 }
 .block-scheme {
   display: inline-block;
   vertical-align: middle;
+  @include breakpoint((to: 992px)) {
+    display: block;
+  }
 }
 .item-scheme {
   display: table-cell;
@@ -27,9 +33,14 @@
     color: #fff;
     font-size: 13px;
   }
+  @include breakpoint((to: 992px)) {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+  }
 }
 .block-scheme-wrapper {
-  width: 960px;
+  max-width: 960px;
   margin: auto;
   text-align: center;
 }
@@ -44,6 +55,13 @@
     background: url(../images/sprite.png) no-repeat 0 -70px;
     display: block;
     margin: auto;
+  }
+  @include breakpoint((to: 992px)) {
+    display: block;
+    margin: 0 auto 10px;
+    &:before {
+      background-position: 0 -164px;
+    }
   }
 }
 .last-item-scheme {
@@ -60,6 +78,24 @@
     background: $grey;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  @include breakpoint((to: 992px)) {
+    display: block;
+    margin: auto;
+    span {
+      @include inline-block(middle);
+      margin-bottom: 0;
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
+  }
+  @include breakpoint((to: 768px)) {
+    span {
+      &:first-child {
+        margin-right: 5px;
+      }
     }
   }
 }
@@ -86,12 +122,33 @@
     bottom: 0;
     background-position: 0 -119px;
   }
+  @include breakpoint((to: 992px)) {
+    display: block;
+    height: 20px;
+    width: 80px;
+    margin: 0 auto 20px;
+    &:before,
+    &:after {
+      left: auto;
+      margin-left: 0;
+    }
+    &:before {
+      left: 0;
+      background-position: 0 -194px;
+    }
+    &:after {
+      right: 0;
+      top: 0;
+      background-position: 0 -218px;
+    }
+  }
 }
 .plus-wrap {
   margin-top: 50px;
   text-align: center;
 }
 .plus-item {
+  margin-bottom: 20px;
   width: 170px;
   @include inline-block(top);
   @include box-sizing;
@@ -102,6 +159,11 @@
   p {
     font-size: 14px;
     margin-top: 25px;
+  }
+  @include breakpoint((to: 992px)) {
+    p {
+      margin-top: 10px;
+    }
   }
 }
 .plus-img {
@@ -123,6 +185,9 @@
     @include inline-block(middle);
     font-size: 14px;
     @include box-sizing;
+  }
+  @include breakpoint((to: 600px)) {
+    margin-right: 0;
   }
 }
 .icon-tape {
@@ -147,14 +212,16 @@
       margin-bottom: 0;
     }
   }
+  @include breakpoint((to: 992px)) {
+    padding: 0 10px;
+  }
 }
 .item-garant {
   width: 150px;
   @include inline-block(top);
-  margin-right: 70px;
-  &:last-child {
-    margin-right: 0;
-  }
+  margin-right: 35px;
+  margin-left: 35px;
+  margin-bottom: 15px;
   .img-garant {
     width: 110px;
     margin: auto;
@@ -169,28 +236,59 @@
     color: #484848;
   }
 }
+
+
+// .certificate {
+//   width: 145px;
+//   @include inline-block(top);
+//   overflow: hidden;
+//   margin-right: 40px;
+//   margin-bottom: 40px;
+//   &:last-child {
+//     margin-right: 0;
+//   }
+//   img {
+//     max-width: 100%;
+//   }
+// }
 .certificate {
-  width: 145px;
-  @include inline-block(top);
-  overflow: hidden;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  &:last-child {
-    margin-right: 0;
-  }
-  img {
-    max-width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  max-width: 900px;
+  margin: 30px auto;
+  a {
+    display: inline-block;
+    width: calc(20% - 22px);
+    overflow: hidden;
+    margin-right: 5px;
+    margin-left: 5px;
+    @include box-sizing;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
+
+
 footer {
   padding: 30px 0;
   text-align: center;
+  .contac-info-row {
+    max-width: 1000px;
+    margin: auto;
+  }
   .contact-info {
     text-align: left;
     margin-left: 20px;
     margin-right: 20px;
-    width: 160px;
+    width: 205px;
+    margin-bottom: 10px;
     @include inline-block(middle);
+    span {
+      display: block;
+    }
     .btn {
       @include inline-block;
       background: #fff;
