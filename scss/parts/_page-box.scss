@@ -238,19 +238,6 @@
 }
 
 
-// .certificate {
-//   width: 145px;
-//   @include inline-block(top);
-//   overflow: hidden;
-//   margin-right: 40px;
-//   margin-bottom: 40px;
-//   &:last-child {
-//     margin-right: 0;
-//   }
-//   img {
-//     max-width: 100%;
-//   }
-// }
 .certificate {
   position: relative;
   text-align: center;
@@ -259,7 +246,7 @@
   margin: 30px auto;
   a {
     display: inline-block;
-    width: calc(20% - 22px);
+    max-width: 400px;
     overflow: hidden;
     margin-right: 5px;
     margin-left: 5px;

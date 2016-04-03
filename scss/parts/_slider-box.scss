@@ -33,25 +33,32 @@
   background-position: 0 0;
 }
 .slide-wrap {
-  position: relative;
   height: 550px;
-  @include table(middle);
-  @include breakpoint((to: 600px)) {
-    display: block;
+  padding: 70px 50px 0 50px;
+  @include breakpoint((to: 992px)) {
     height: auto;
     padding: 20px 0;
   }
 }
 .text-wrap {
-  padding: 0 20px;
+  @include inline-block(middle);
+  width: 70%;
+  margin-left: -100px;
   h2 {
     color: #fff;
     font-size: 30px;
     text-transform: uppercase;
+    padding-left: 100px;
   }
   @include breakpoint((to: 992px)) {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
     h2 {
       font-size: 20px;
+      padding-left: 15px;
+      margin-bottom: 10px;
     }
   }
   @include breakpoint((to: 768px)) {
@@ -64,10 +71,14 @@
   }
 }
 .slide-text {
-  margin-top: 10px;
+  padding-left: 100px;
+  background: rgba(255, 255, 255, 0.72);
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
   ul {
     li {
-      color: #fff;
+      color: $grey;
       list-style: initial;
       margin-left: 20px;
       margin-bottom: 10px;
@@ -75,14 +86,14 @@
   }
   h4 {
     font-size: 19px;
-    color: #fff;
+    color: $grey;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 10px;
   }
   p {
     font-size: 15px;
-    color: #fff;
+    color: $grey;
     margin-top: 15px;
     margin-bottom: 10px;
   }
@@ -90,10 +101,13 @@
     text-align: right;
     text-transform: uppercase;
     margin-top: 20px;
-    color: #fff;
+    color: $blue;
     display: block;
     font-size: 20px;
     font-weight: bold;
+  }
+  @include breakpoint((to: 992px)) {
+    padding-left: 15px;
   }
   @include breakpoint((to: 768px)) {
     ul {
@@ -118,16 +132,18 @@
   }
 }
 .image-wrap {
-  width: 40%;
-  padding-left: 50px;
+  @include inline-block(middle);
+  width: 35%;
   img {
     max-width: 100%;
   }
-  @include breakpoint((to: 600px)) {
+  @include breakpoint((to: 992px)) {
     display: block;
-    width: 250px;
-    padding-left: 0;
+    width: auto;
     margin: auto;
+    img {
+      margin: auto;
+    }
   }
 }
 .link-wrap {
@@ -194,6 +210,9 @@
   border-spacing: 1px;
   border-color: #e8e8e8;
   border-collapse: collapse;
+  @include breakpoint((to: 992px)) {
+    display: none;
+  }
   thead {
     background: #b0b0b0;
   }
@@ -201,7 +220,6 @@
     padding: 10px 5px;
     border: 1px solid #e8e8e8;
     text-align: center;
-
   }
   tbody {
     tr {
@@ -221,4 +239,26 @@
 }
 .table-wrapper {
   overflow-x: auto;
+}
+.adaptive {
+  display: none;
+  thead {
+    background: #b0b0b0;
+    th {
+      padding: 10px;
+    }
+  }
+  td {
+    padding: 10px;
+  }
+  tbody {
+    tr {
+      &:nth-child(2n) {
+        background: #f2f2f2;
+      }
+    }
+  }
+  @include breakpoint((to: 992px)) {
+    display: table;
+  }
 }
