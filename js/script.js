@@ -1,5 +1,7 @@
 (function($) {
-'use strict';
+  'use strict';
+
+  $('.specifications').productsTable();
 
 var overlay = $('#overlay');
 var open_modal = $('.open_modal');
@@ -54,12 +56,11 @@ var owlMain = $('.owl').owlCarousel({
   dots: false,
   autoplayHoverPause: true,
   autoHeight:false,
-
-  items : 1,
+  items: 1
 });
 $('.next').click(function() {
   owlMain.trigger('next.owl.carousel');
-})
+});
 $('.prev').click(function() {
   owlMain.trigger('prev.owl.carousel');
 });
@@ -79,60 +80,3 @@ function sendform(){
         }
     });
 }
-
-
-
-function responsTables(tables){
-
-  var tableArr=new Array();
-  var elem_str='';
-
-    // Сохранение значений в массив
-    tables.find('tr').each(function(index, elem){
-
-      $(this).find('td,th').each(function(index_td, elem_td){
-
-        if(index==0){
-          tableArr[index_td]=new Array();
-        }
-
-        //tableArr[index_td][index]=elem_td.innerText;
-        tableArr[index_td][index]=$(this).html();
-        // console.log($(this).html());
-      });
-    });
-
-    // Перебор масива и создание новых объектов
-    var strtable='';
-    $.each(tableArr, function( index, elem ) {
-      if(index>0){
-        $.each(tableArr[index], function( index_td, elem_td ) {
-          if(index_td>0){
-            strtable=strtable+'<tr>'+'<td>'+tableArr[0][index_td]+'</td><td>'+elem_td+'</td></tr>';
-            if( typeof tableArr[index][index_td+1] == "undefined" ){strtable=strtable+'</tbody></table>'}
-          }else{
-            strtable=strtable+'<table width="100%" class="adaptive"><thead><tr><th colspan="2">'+elem_td+'</th></tr></thead><tbody>';
-          }
-
-        });
-      }
-    });
-
-    tables.addClass('hide_table');
-    tables.parent().append(strtable);
-  }
-
-  if($(window).width()<=980){ $('#responsiveTabs table, #table1 table').each(function(elem){ responsTables($(this)); }); }
-
-  // $( window ).resize(function() {
-  //   if($(window).width()<=980){
-  //     $('#responsiveTabs table, #asd table').each(function(i, e){
-  //       responsTables($(this));
-  //     });
-
-  //   }else{
-  //     $('#responsiveTabs table.adaptive, #asd table.adaptive').remove();
-  //     $('#responsiveTabs table.hide_table, #asd table.hide_table').removeClass('hide_table');
-  //   }
-  //   //console.log($(window).width());
-  // });
