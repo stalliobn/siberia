@@ -1,7 +1,11 @@
 (function($) {
   'use strict';
 
-  $('.specifications').productsTable();
+  $('.specifications').productsTable({
+    attributes: {
+      'class': 'adaptive'
+    }
+  });
 
 var overlay = $('#overlay');
 var open_modal = $('.open_modal');
